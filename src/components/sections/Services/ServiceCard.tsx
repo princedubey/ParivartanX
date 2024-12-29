@@ -1,25 +1,29 @@
-import { LucideIcon } from 'lucide-react';
-import { motion } from 'framer-motion';
+"use client";
+
+import { Service } from "@/components/sections/services/types";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { IconComponent } from "@/components/sections/services/icon-component";
 
 interface ServiceCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  index: number;
+  service: Service;
 }
 
-export function ServiceCard({ icon: Icon, title, description, index }: ServiceCardProps) {
+export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <motion.div 
-      className="p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
-    >
-      <Icon className="w-12 h-12 text-indigo-600 mb-4" />
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </motion.div>
+    <Card className="p-6 hover:shadow-lg transition-all duration-300 bg-slate-900 backdrop-blur-sm hover:transform hover:-translate-y-1">
+      <div className="flex flex-col items-center text-center">
+        <IconComponent Icon={service.icon} />
+        <h3 className="text-xl font-semibold  mb-3">
+          {service.title}
+        </h3>
+        <p className="text-gray-600 mb-4">
+          {service.description}
+        </p>
+        <Button variant="outline" className="mt-auto hover:bg-blue-600 hover:text-white">
+          Learn More
+        </Button>
+      </div>
+    </Card>
   );
 }

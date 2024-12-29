@@ -1,36 +1,19 @@
-"use client";
-
-import Link from "next/link";
-import { SocialLinks } from "./social-links";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactInfo() {
   return (
-    <div className="space-y-12">
-      <div>
-        <h2 className="mb-4 text-4xl font-bold text-indigo-500">Contact Info</h2>
-        <p className="mb-6 text-muted-foreground">
-          Need help? Feel free to contact us and we&apos;ll respond as soon as possible.
-        </p>
-        <div className="space-y-4">
-          <p className="text-lg">sales@parivartanXdevelopment.com</p>
-          <p className="text-2xl font-semibold">+91 305 767 2434</p>
-        </div>
+    <div className="space-y-4">
+      <div className="flex items-center gap-3 text-muted-foreground">
+        <MapPin className="h-5 w-5 text-indigo-400" />
+        <span>70 Feet, Sipara,Patna-800001 Bihar , India</span>
       </div>
-
-      <SocialLinks />
-
-      <div className="text-sm text-muted-foreground">
-        <p>
-          This site is protected by reCAPTCHA and the Google{" "}
-          <Link href="#" className="text-muted-foreground hover:underline">
-            Privacy Policy
-          </Link>{" "}
-          and{" "}
-          <Link href="#" className="text-muted-foreground hover:underline">
-            Terms of Service
-          </Link>{" "}
-          apply.
-        </p>
+      <div className="flex items-center gap-3 text-muted-foreground">
+        <Phone className="h-5 w-5 text-indigo-400" />
+        <span>+91 9060924752</span>
+      </div>
+      <div className="flex items-center gap-3 text-muted-foreground">
+        <Mail className="h-5 w-5 text-indigo-400" />
+        <span>info@parivartanx@gmail.com</span>
       </div>
     </div>
   );

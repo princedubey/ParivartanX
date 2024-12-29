@@ -1,12 +1,15 @@
 'use client'
 import { ArrowRight, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import HeroSection from '../3d/HeroSection';
 // import { Scene } from '../3d/Scene';
+import Touch from '../../../public/touch-icon.png'
+import { useRouter } from 'next/navigation';
 
 export function Hero() {
   return (
-    <div className="relative min-h-screen  overflow-hidden flex items-center">
+    <div className="relative h-screen  overflow-hidden flex items-center">
       <HeroSection />
       <div className="container mx-auto px-4 py-32 relative flex items-center">
         <motion.div 
@@ -59,8 +62,12 @@ export function Hero() {
         </motion.div>
       </div>
       <div 
-      className='bg-black px-8 absolute bottom-5 right-7 text-white text-sm py-2 border border-border rounded-lg'>
-        parivartanX
+        onClick={() => {
+           
+        }}
+        className='absolute bottom-0 right-2 flex justify-center  bg-background  border border-primary rounded-md'>
+      <Image src={Touch.src} alt="Get in Touch" width={200} height={80} />
+
       </div>
     </div>
   );

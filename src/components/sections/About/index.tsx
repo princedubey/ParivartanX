@@ -6,7 +6,7 @@ import { StatsCard } from './stats-card';
 
 export function About() {
   return (
-    <section className="py-24 " id="about">
+    <section className="py-8 " id="about">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -50,11 +50,11 @@ export function About() {
           </div>
         </div>
         
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {stats.map((stat, index) => (
                     <StatsCard key={stat.label} stat={stat} index={index} />
                   ))}
-                </div>
+                </div> */}
         
       </div>
     </section>

@@ -1,13 +1,15 @@
 import React from 'react';
 import { Hero } from '../components/sections/Hero';
-import { Services } from '../components/sections/Services';
 import { Projects } from '../components/sections/Projects';
 import { About } from '../components/sections/About';
-import { Contact } from '../components/sections/Contact';
+import ContactSection from '../components/sections/contact';
 import HeroSection from '@/components/3d/HeroSection';
 import { Navbar } from '@/components/sections/navbar';
 import { Footer } from '@/components/sections/footer';
 import { ClientLogos } from '@/components/sections/Clients';
+import WhatMakesUsDifferent from '@/components/sections/what-makes-us-different';
+import ServicesSection from '@/components/sections/services/ServicesSection';
+import CompanyJourney from '@/components/sections/company-journey';
 
 function App() {
   return (
@@ -15,10 +17,12 @@ function App() {
       <Navbar/>
       <Hero/>
       <ClientLogos />
-      <Services />
+      <ServicesSection />
+      <WhatMakesUsDifferent/>
+      <CompanyJourney/>
       <Projects />
       <About />
-      <Contact />
+      <ContactSection />
       <Footer/>
     </div>
   );
