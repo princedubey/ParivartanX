@@ -7,12 +7,14 @@ import { Contact } from '../components/sections/Contact';
 import HeroSection from '@/components/3d/HeroSection';
 import { Navbar } from '@/components/sections/navbar';
 import { Footer } from '@/components/sections/footer';
+import { ClientLogos } from '@/components/sections/Clients';
 
 function App() {
   return (
     <div className="overflow-y-auto">
       <Navbar/>
       <Hero/>
+      <ClientLogos />
       <Services />
       <Projects />
       <About />

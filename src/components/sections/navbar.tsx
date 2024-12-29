@@ -4,13 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { ThemeToggle } from "../theme-toggle";
 
 const navigation = [
   { name: "What We Do", href: "#services" },
@@ -30,7 +25,12 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Rocket className="h-8 w-8 text-primary" />
-              <span className="font-bold text-xl">ParivartanX</span>
+              <div className="flex items-center">
+                <span className="font-bold text-xl">Parivartan</span>
+                <span className="font-bold text-4xl text-indigo-400 tracking-wide transform scale-110">
+                  X
+                </span>
+              </div>
             </Link>
           </div>
 
@@ -47,7 +47,6 @@ export function Navbar() {
             ))}
             {/* <Button>Request Estimate</Button> */}
           </div>
-          <ThemeToggle/>
 
           {/* Mobile navigation */}
           <div className="md:hidden">
@@ -69,9 +68,9 @@ export function Navbar() {
                       {item.name}
                     </Link>
                   ))}
-                  <Button 
-                   variant={'secondary'}
-                   className="w-full">Request Estimate</Button>
+                  <Button variant={"secondary"} className="w-full">
+                    Request Estimate
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
